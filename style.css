@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Kavivanar&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&family=Space+Grotesk:wght@300..700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+:root {
+    --NeilCitBrg : #44e5ca;
+    --MarieCurieBrg: #e55744;
+    --SocrateBrg : #69e544;
+    --CarlSbrg: #e5a044;
+    --AlbertEibrg : #bde544;
+    --PoliceNeil: #4c0f19;
+    --PoliceMarieC: #0f454c;
+    --PoliceSocrate: #3e0f4c;
+    --PoliceCarlS: #0f294c;
+    --PoliceAlbertEi: #1e0f4c;
+}
+
+body {
+    font-family: "Playfair Display", sans-serif;
+    padding: 5%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+button {
+    font-family: "Playfair Display", sans-serif;
+    width: fit-content;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.infos {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+
+.NeildeGrasseTysonButton {
+    color: var(--PoliceNeil);
+    background-color: var(--NeilCitBrg);
+}
+
+.NeildeGrasseTysonBody {
+    background-color: var(--NeilCitBrg);
+    color: var(--PoliceNeil);
+}
+
+.MarieCurieButton {
+    background-color: var(--MarieCurieBrg);
+    color: var(--PoliceMarieC);
+}
+
+.MarieCurieBody {
+    background-color: var(--MarieCurieBrg);
+    color: var(--PoliceMarieC);
+}
+
+.SocrateButton {
+    background-color: var(--SocrateBrg);
+    color: var(--PoliceSocrate);
+}
+
+.SocrateBody {
+    background-color: var(--SocrateBrg);
+    color: var(--PoliceSocrate);
+}
+
+.CarlSaganButton {
+    background-color: var(--CarlSbrg);
+    color: var(--PoliceCarlS);
+}
+
+.CarlSaganBody {
+    background-color: var(--CarlSbrg);
+    color: var(--PoliceCarlS);
+}

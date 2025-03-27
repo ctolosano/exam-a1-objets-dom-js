@@ -28,12 +28,12 @@ const Citation = [
 	},
 	{
 		citation: "Nous sommes faits de poussière d’étoiles.",
-		auteur: "Socrate",
-		date: 1730,
-		tags: "Innovation, Astronomie",
-		couleurdefond: "#69e544",
-		couleurdepolice: "#3e0f4c",
-		origine: "",
+		auteur: "Carl Sagan",
+		date: 2017,
+		tags: "Littérature, Innovation, Astronomie",
+		couleurdefond: "#e5a044",
+		couleurdepolice: "#0f294c",
+		origine: "Le Monde",
 	},
 	{
 		citation:
@@ -48,39 +48,65 @@ const Citation = [
 ];
 const Button = document.getElementById("button");
 const mainElement = document.getElementById("main");
+let CitationText = document.querySelector("#titre");
+let phrase = document.querySelector("#info");
 
-for (let i = 0; i < Citation.length; i++) {
-    let info = Citation[i];
+let compteur = 0;
+Button.addEventListener("click", () => {
+	compteur = compteur + 1;
+	if (compteur == Citation.length) {
+		compteur = 0;
+	}
+	console.log(Citation[compteur].auteur);
 
-    let oui = CreateCitation(
-        info.citation,
-        info.auteur,
-        info.date,
-        info.tags,
-        info.couleurdefond,
-        info.couleurdepolice,
-        info.origine
-    );
+	CitationText.textContent = Citation[compteur].citation;
 
-    
+	phrase.textContent =
+		Citation[compteur].auteur +
+		", " +
+		Citation[compteur].date +
+		", " +
+		Citation[compteur].origine;
 
-    Button.addEventListener("click", () => {});
-} 
-function CreateCitation(
-	citation,
-	auteur,
-	date,
-	tags,
-	couleurdefond,
-	couleurdepolice,
-	origine
-) {
-	let CitationText = document.getElementById("titre");
-	CitationText.textContent = citation;
+	document.body.style.backgroundColor = Citation[compteur].couleurdefond;
+	Button.style.backgroundColor = Citation[compteur].couleurdepolice;
+});
 
-	let phrase = document.getElementById("infos");
-	phrase.tetContent = auteur + ", " + date + ", " + origine; 
+CitationText.textContent = Citation[compteur].citation;
+phrase.textContent =
+	Citation[compteur].auteur +
+	", " +
+	Citation[compteur].date +
+	", " +
+	Citation[compteur].origine;
 
-    return Oui  
-}
+let couleur = (document.body.style.backgroundColor =
+	Citation[compteur].couleurdefond);
 
+let couleurBtn = (Button.style.backgroundColor =
+	Citation[compteur].couleurdepolice);
+
+setInterval(() => {
+	compteur = compteur + 1;
+	if (compteur == Citation.length) {
+		compteur = 0;
+	}
+	console.log(Citation[compteur].auteur);
+
+	let CitationText = document.querySelector("#titre");
+	CitationText.textContent = Citation[compteur].citation;
+
+	let phrase = document.querySelector("#info");
+	phrase.textContent =
+		Citation[compteur].auteur +
+		", " +
+		Citation[compteur].date +
+		", " +
+		Citation[compteur].origine;
+
+	let couleur = (document.body.style.backgroundColor =
+		Citation[compteur].couleurdefond);
+
+	let couleurBtn = (Button.style.backgroundColor =
+		Citation[compteur].couleurdepolice);
+}, 10000);

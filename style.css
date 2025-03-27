@@ -19,6 +19,7 @@ body {
     display: flex;
     align-items: center;
     flex-direction: column;
+    color: #fff;
 }
 
 button {
@@ -26,6 +27,7 @@ button {
     width: fit-content;
     padding: 10px;
     border-radius: 5px;
+    color: #fff;
 }
 
 .infos {
